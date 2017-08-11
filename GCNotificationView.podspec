@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'GCNotificationView'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of GCNotificationView.'
+  s.summary          = 'GCNotificationView is a library allows you to easily toast your message to user.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,14 +18,15 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+GCNotificationView is a library allows you to easily toast your message to user.
+This library is for the developer who is lazy enought.
                        DESC
 
-  s.homepage         = 'https://github.com/jhl1214@me.com/GCNotificationView'
+  s.homepage         = 'https://github.com/jhl1214/GCNotificationView'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'jhl1214@me.com' => 'dangercloz@gmail.com' }
-  s.source           = { :git => 'https://github.com/jhl1214@me.com/GCNotificationView.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/jhl1214/GCNotificationView.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.ios.deployment_target = '8.0'
