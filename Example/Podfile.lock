@@ -1,0 +1,16 @@
+PODS:
+  - GCNotificationView (0.1.0)
+
+DEPENDENCIES:
+  - GCNotificationView (from `../`)
+
+EXTERNAL SOURCES:
+  GCNotificationView:
+    :path: ../
+
+SPEC CHECKSUMS:
+  GCNotificationView: c2af9d8b12f395fe3bb35032a46a9932771924ee
+
+PODFILE CHECKSUM: ec79cc3fda4e0e3f581685071b7e958a8578f776
+
+COCOAPODS: 1.2.1

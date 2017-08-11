@@ -29,7 +29,7 @@
 
 /* Begin PBXFileReference section */
 		058107C49B329AEE01794E30 /* Pods-GCNotificationView_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCNotificationView_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GCNotificationView_Tests/Pods-GCNotificationView_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		0E548D925DC9A424178AD7DA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		0E548D925DC9A424178AD7DA /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		1F7BEADFD144D91D5D0C19E1 /* Pods_GCNotificationView_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GCNotificationView_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD01AFB9204008FA782 /* GCNotificationView_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GCNotificationView_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,8 +44,8 @@
 		6A7BFB8E36B61F27940AEFB0 /* Pods_GCNotificationView_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GCNotificationView_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7445931F10C563A965691365 /* Pods-GCNotificationView_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCNotificationView_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-GCNotificationView_Example/Pods-GCNotificationView_Example.release.xcconfig"; sourceTree = "<group>"; };
 		7EBF05875EEB5C0F32874415 /* Pods-GCNotificationView_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCNotificationView_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GCNotificationView_Tests/Pods-GCNotificationView_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		A7508D3F01413B0008551910 /* GCNotificationView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = GCNotificationView.podspec; path = ../GCNotificationView.podspec; sourceTree = "<group>"; };
-		CA90910A9F8F7D5245B4BFDE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		A7508D3F01413B0008551910 /* GCNotificationView.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = GCNotificationView.podspec; path = ../GCNotificationView.podspec; sourceTree = "<group>"; };
+		CA90910A9F8F7D5245B4BFDE /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		E0560075027F89DA67B42C85 /* Pods-GCNotificationView_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GCNotificationView_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GCNotificationView_Example/Pods-GCNotificationView_Example.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -215,10 +215,13 @@
 				TargetAttributes = {
 					607FACCF1AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = FPY265UZF4;
 						LastSwiftMigration = 0820;
+						ProvisioningStyle = Automatic;
 					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = FPY265UZF4;
 						LastSwiftMigration = 0820;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -496,11 +499,15 @@
 			baseConfigurationReference = E0560075027F89DA67B42C85 /* Pods-GCNotificationView_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = FPY265UZF4;
 				INFOPLIST_FILE = GCNotificationView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -510,11 +517,15 @@
 			baseConfigurationReference = 7445931F10C563A965691365 /* Pods-GCNotificationView_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = FPY265UZF4;
 				INFOPLIST_FILE = GCNotificationView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.demo.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -523,6 +534,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 058107C49B329AEE01794E30 /* Pods-GCNotificationView_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = FPY265UZF4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -543,6 +555,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7EBF05875EEB5C0F32874415 /* Pods-GCNotificationView_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = FPY265UZF4;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

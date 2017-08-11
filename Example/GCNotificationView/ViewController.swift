@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import GCNotificationView
 
 class ViewController: UIViewController {
 

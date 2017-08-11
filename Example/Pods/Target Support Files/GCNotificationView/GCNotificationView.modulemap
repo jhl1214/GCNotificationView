@@ -1,0 +1,6 @@
+framework module GCNotificationView {
+  umbrella header "GCNotificationView-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_GCNotificationView_Tests {
+  umbrella header "Pods-GCNotificationView_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
