@@ -3,6 +3,9 @@
 [![Version](https://img.shields.io/cocoapods/v/GCNotificationView.svg?style=flat)](http://cocoapods.org/pods/GCNotificationView)
 [![License](https://img.shields.io/cocoapods/l/GCNotificationView.svg?style=flat)](http://cocoapods.org/pods/GCNotificationView)
 [![Platform](https://img.shields.io/cocoapods/p/GCNotificationView.svg?style=flat)](http://cocoapods.org/pods/GCNotificationView)
+[![Swift 3.0](https://img.shields.io/badge/Swift-3.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
+
+## Intoduction
 
 `GCNotificationView` is simple but very useful toast message view for iOS. You can easily set message and show it to user with a single method call. You can change it's location wherever you want.
 
@@ -15,6 +18,7 @@
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Requirements
+
 `GCNotificationView` is written in Swift 3. Compatible with iOS 9.0+
 
 ## Installation
@@ -34,12 +38,14 @@ First you need to import `GCNotificationView`
 import GCNotificationView
 ```
 
-Then all you need to do to use `GCNotificationView` is simply call the method with your message!
+Then all you need to do to use `GCNotificationView` is simply call the method with your message.
 
 
 ```swift
 GCNotificationView(yPoint: CGFloat).show(message: "Hello, World!")
 ```
+
+Done! Super easy and super simple.
 
 ## Author
 
