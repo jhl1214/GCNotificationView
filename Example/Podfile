@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'GCNotificationView_Example' do
+  pod 'GCNotificationView', :path => '../'
+
+  target 'GCNotificationView_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
