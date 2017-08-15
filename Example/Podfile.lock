@@ -1,5 +1,5 @@
 PODS:
-  - GCNotificationView (0.1.0)
+  - GCNotificationView (0.2.0)
 
 DEPENDENCIES:
   - GCNotificationView (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: ../
 
 SPEC CHECKSUMS:
-  GCNotificationView: c2af9d8b12f395fe3bb35032a46a9932771924ee
+  GCNotificationView: 2ff0a5486c3e277f738a1e18ff03ebf0d2bde153
 
 PODFILE CHECKSUM: ec79cc3fda4e0e3f581685071b7e958a8578f776
 
