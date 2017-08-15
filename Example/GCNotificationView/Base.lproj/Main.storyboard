@@ -52,7 +52,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0A-Qh-4rz">
-                                <rect key="frame" x="16" y="88" width="343" height="44"/>
+                                <rect key="frame" x="16" y="136" width="343" height="44"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="4gT-Ny-M1f"/>
@@ -70,14 +70,28 @@
                                     <action selector="toggleShowNotification:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wdn-Ox-bXR"/>
                                 </connections>
                             </button>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="R39-R6-ZRb">
+                                <rect key="frame" x="16" y="88" width="343" height="29"/>
+                                <segments>
+                                    <segment title="Default"/>
+                                    <segment title="Red"/>
+                                    <segment title="Orange"/>
+                                </segments>
+                                <connections>
+                                    <action selector="toggleColor:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Txf-be-oDS"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="i0A-Qh-4rz" firstAttribute="top" secondItem="OLr-jb-dzO" secondAttribute="bottom" constant="20" id="CLy-Xf-GsH"/>
                             <constraint firstAttribute="trailing" secondItem="2dO-L7-ik5" secondAttribute="trailing" id="Czp-cd-TGr"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="R39-R6-ZRb" secondAttribute="trailing" id="Od9-Gd-KX7"/>
                             <constraint firstAttribute="trailingMargin" secondItem="OLr-jb-dzO" secondAttribute="trailing" id="UFX-GM-q19"/>
+                            <constraint firstItem="i0A-Qh-4rz" firstAttribute="top" secondItem="R39-R6-ZRb" secondAttribute="bottom" constant="20" id="Ucl-88-3AW"/>
                             <constraint firstItem="2dO-L7-ik5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Xcy-6x-8Sc"/>
                             <constraint firstItem="OLr-jb-dzO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="XvY-BY-mD3"/>
+                            <constraint firstItem="R39-R6-ZRb" firstAttribute="top" secondItem="OLr-jb-dzO" secondAttribute="bottom" constant="20" id="ZWv-CS-WyA"/>
+                            <constraint firstItem="R39-R6-ZRb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="egh-wG-0kv"/>
                             <constraint firstAttribute="bottom" secondItem="2dO-L7-ik5" secondAttribute="bottom" id="hSb-9l-DgP"/>
                             <constraint firstItem="OLr-jb-dzO" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="ntd-zT-zXp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="i0A-Qh-4rz" secondAttribute="trailing" id="qJ5-ah-mKT"/>
@@ -100,6 +114,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="LJv-9N-G36" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="NaN-MG-fKk">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>

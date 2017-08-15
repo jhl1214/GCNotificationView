@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'GCNotificationView'
-  s.version          = '0.1.0'
+  s.version          = '0.2.0'
   s.summary          = 'GCNotificationView is a library allows you to easily toast your message to user.'
 
 # This description is used to generate tags and improve search results.

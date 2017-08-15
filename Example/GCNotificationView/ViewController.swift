@@ -12,6 +12,7 @@ import GCNotificationView
 class ViewController: UIViewController {
     @IBOutlet var customView: UIView!
     
+    var notificationView: GCNotificationView = GCNotificationView()
     var yPoint: CGFloat = 0
     
     override func viewDidLoad() {
@@ -36,11 +37,14 @@ extension ViewController {
         
         switch sender.selectedSegmentIndex {
         case 0:
+            notificationView.yPoint = 0
             yPoint = 0
         case 1:
+            notificationView.yPoint = self.tabBarController?.tabBar.bounds.height ?? 0
             yPoint = self.tabBarController?.tabBar.bounds.height ?? 0
             self.tabBarController?.tabBar.isHidden = false
         case 2:
+            notificationView.yPoint = self.customView.bounds.height
             yPoint = self.customView.bounds.height
             self.customView.isHidden = false
         default:
@@ -48,7 +52,20 @@ extension ViewController {
         }
     }
     
+    @IBAction func toggleColor(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            notificationView.bgColor = UIColor(red: 78 / 255, green: 136 / 255, blue: 207 / 255, alpha: 1.0)
+        case 1:
+            notificationView.bgColor = .red
+        case 2:
+            notificationView.bgColor = .orange
+        default:
+            break
+        }
+    }
+    
     @IBAction func toggleShowNotification(_ sender: UIButton) {
-        GCNotificationView(yPoint: yPoint).show(message: "Hello, World!")
+        notificationView.show(message: "Hello, World!")
     }
 }

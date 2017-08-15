@@ -19,7 +19,7 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
-`GCNotificationView` is written in Swift 3. Compatible with iOS 9.0+
+`GCNotificationView` is written in Swift 3. Compatible with iOS 8.0+
 
 ## Installation
 
@@ -45,7 +45,23 @@ Then all you need to do to use `GCNotificationView` is simply call the method wi
 GCNotificationView(yPoint: CGFloat).show(message: "Hello, World!")
 ```
 
+Or you can customize toast view with your own favor.
+
+```swift
+var notificationView = GCNotificationView()
+notificationView.yPoint = 48
+notificationView.bgColor = .orange
+notificationView.Show(message: "Hello, World!")
+```
+
 Done! Super easy and super simple.
+
+These are the variables you can customize. If you don't mention these variables, it will automatically set as default values.
+
+```swift
+yPoint: CGFloat     // Position of the toast view on y-axis
+bgColor: UIColor    // Background color of toast view
+```
 
 ## Author
 
