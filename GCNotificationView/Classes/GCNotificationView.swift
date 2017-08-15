@@ -15,7 +15,8 @@ public class GCNotificationView: UIView {
     fileprivate var messageLabel: UILabel!
     
     static fileprivate var isShowing: Bool = false
-    fileprivate var yPoint: CGFloat = 0
+    public var yPoint: CGFloat = 0
+    public var bgColor: UIColor = UIColor(red: 78 / 255, green: 136 / 255, blue: 207 / 255, alpha: 1.0)
     
     public init(yPoint: CGFloat = 0) {
         super.init(frame: .zero)
@@ -35,7 +36,7 @@ extension GCNotificationView {
         clipsToBounds = true
         
         toastView = UIView(frame: CGRect(x: 0, y: 0, width: bounds.width, height: bounds.height))
-        toastView.backgroundColor = UIColor(red: 78 / 255, green: 136 / 255, blue: 207 / 255, alpha: 1.0)
+        toastView.backgroundColor = bgColor
         addSubview(toastView)
     }
     
