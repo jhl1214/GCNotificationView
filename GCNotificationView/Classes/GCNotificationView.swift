@@ -15,13 +15,15 @@ public class GCNotificationView: UIView {
     fileprivate var messageLabel: UILabel!
     
     static fileprivate var isShowing: Bool = false
+    public var duration: Double = 0.3
     public var yPoint: CGFloat = 0
-    public var bgColor: UIColor = UIColor(red: 78 / 255, green: 136 / 255, blue: 207 / 255, alpha: 1.0)
-    public var textColor: UIColor = UIColor(red: 255 / 255, green: 255 / 255, blue: 255 / 255, alpha: 1.0)
+    public var bgColor: UIColor = GCNotificationViewDefaultColor.bgColor
+    public var textColor: UIColor = GCNotificationViewDefaultColor.txtColor
     
-    public init(yPoint: CGFloat = 0) {
+    public init(duration: Double = 0.3, yPoint: CGFloat = 0) {
         super.init(frame: .zero)
         
+        self.duration = duration
         self.yPoint = yPoint
     }
     
@@ -57,14 +59,14 @@ extension GCNotificationView {
         GCNotificationView.isShowing = true
         toastView.transform = CGAffineTransform(translationX: 0, y: toastView.bounds.height)
         
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: duration) {
             self.toastView.transform = CGAffineTransform(translationX: 0, y: 0)
             self.layoutIfNeeded()
         }
     }
     
     fileprivate func dismissAnimation() {
-        UIView.animate(withDuration: 0.3, animations: {
+        UIView.animate(withDuration: duration, animations: {
             self.toastView.transform = CGAffineTransform(translationX: 0, y: self.toastView.bounds.height)
         }) { _ in
             self.removeFromSuperview()
@@ -95,6 +97,18 @@ extension GCNotificationView {
 }
 
 extension GCNotificationView {
+    public func change(duration: Double) -> GCNotificationView {
+        self.duration = duration
+        
+        return self
+    }
+    
+    public func change(yPoint: CGFloat) -> GCNotificationView {
+        self.yPoint = yPoint
+        
+        return self
+    }
+    
     public func change(backgroundColor: UIColor) -> GCNotificationView {
         self.bgColor = backgroundColor
         
@@ -116,7 +130,7 @@ extension GCNotificationView {
         setupMessage(message: message)
         addNotificationView {
             showAnimation()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3.3) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0 + duration) {
                 self.dismissAnimation()
             }
         }
