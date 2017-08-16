@@ -15,12 +15,17 @@ public class GCNotificationView: UIView {
     fileprivate var messageLabel: UILabel!
     
     static fileprivate var isShowing: Bool = false
+    public var duration: Double = 0.3
+    public var delay: Double = 3.0
     public var yPoint: CGFloat = 0
-    public var bgColor: UIColor = UIColor(red: 78 / 255, green: 136 / 255, blue: 207 / 255, alpha: 1.0)
+    public var bgColor: UIColor = GCNotificationViewDefaultColor.bgColor
+    public var textColor: UIColor = GCNotificationViewDefaultColor.txtColor
     
-    public init(yPoint: CGFloat = 0) {
+    public init(duration: Double = 0.3, delay: Double = 3.0, yPoint: CGFloat = 0) {
         super.init(frame: .zero)
         
+        self.duration = duration
+        self.delay = delay
         self.yPoint = yPoint
     }
     
@@ -43,7 +48,7 @@ extension GCNotificationView {
     fileprivate func setupMessage(message: String) {
         messageLabel = UILabel(frame: CGRect(x: 8, y: 0, width: toastView.bounds.width - 16, height: toastView.bounds.height))
         messageLabel.font = UIFont.systemFont(ofSize: 13.0)
-        messageLabel.textColor = .white
+        messageLabel.textColor = textColor
         messageLabel.numberOfLines = 1
         messageLabel.text = message
         
@@ -56,14 +61,14 @@ extension GCNotificationView {
         GCNotificationView.isShowing = true
         toastView.transform = CGAffineTransform(translationX: 0, y: toastView.bounds.height)
         
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: duration) {
             self.toastView.transform = CGAffineTransform(translationX: 0, y: 0)
             self.layoutIfNeeded()
         }
     }
     
     fileprivate func dismissAnimation() {
-        UIView.animate(withDuration: 0.3, animations: {
+        UIView.animate(withDuration: duration, animations: {
             self.toastView.transform = CGAffineTransform(translationX: 0, y: self.toastView.bounds.height)
         }) { _ in
             self.removeFromSuperview()
@@ -94,6 +99,36 @@ extension GCNotificationView {
 }
 
 extension GCNotificationView {
+    public func change(duration: Double) -> GCNotificationView {
+        self.duration = duration
+        
+        return self
+    }
+    
+    public func change(delay: Double) -> GCNotificationView {
+        self.delay = delay
+        
+        return self
+    }
+    
+    public func change(yPoint: CGFloat) -> GCNotificationView {
+        self.yPoint = yPoint
+        
+        return self
+    }
+    
+    public func change(backgroundColor: UIColor) -> GCNotificationView {
+        self.bgColor = backgroundColor
+        
+        return self
+    }
+    
+    public func change(textColor: UIColor) -> GCNotificationView {
+        self.textColor = textColor
+        
+        return self
+    }
+    
     public func show(message: String) {
         guard !GCNotificationView.isShowing else {
             return
@@ -103,7 +138,8 @@ extension GCNotificationView {
         setupMessage(message: message)
         addNotificationView {
             showAnimation()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3.3) {
+            let timeNeed = duration + delay
+            DispatchQueue.main.asyncAfter(deadline: .now() + timeNeed) {
                 self.dismissAnimation()
             }
         }

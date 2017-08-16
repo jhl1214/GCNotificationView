@@ -1,27 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="LJv-9N-G36">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="S36-8q-MLe">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
-        <scene sceneID="ufC-wZ-h7g">
+        <scene sceneID="HeB-mZ-Gjb">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="GCNotificationView_Example" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="Hht-5d-N9E" customClass="ViewController" customModule="GCNotificationView_Example" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="LHv-av-Ddv"/>
+                        <viewControllerLayoutGuide type="bottom" id="pX1-x8-ymi"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                    <view key="view" contentMode="scaleToFill" id="5kH-2W-dJq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="OLr-jb-dzO">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="E9Z-Yk-2h2">
                                 <rect key="frame" x="16" y="40" width="343" height="29"/>
                                 <segments>
                                     <segment title="Default"/>
@@ -29,33 +30,33 @@
                                     <segment title="Custom Tabbar"/>
                                 </segments>
                                 <connections>
-                                    <action selector="toggleYAxis:" destination="vXZ-lx-hvc" eventType="valueChanged" id="MbD-FV-i8L"/>
+                                    <action selector="toggleYAxis:" destination="Hht-5d-N9E" eventType="valueChanged" id="3iE-He-9oD"/>
                                 </connections>
                             </segmentedControl>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2dO-L7-ik5">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lbH-oW-YbJ">
                                 <rect key="frame" x="0.0" y="587" width="375" height="80"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IKW-R9-d1Y">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gW7-pn-m4Q">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="0.5"/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="0.5" id="FYT-0e-Zm2"/>
+                                            <constraint firstAttribute="height" constant="0.5" id="3bP-bq-WS6"/>
                                         </constraints>
                                     </view>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="IKW-R9-d1Y" firstAttribute="top" secondItem="2dO-L7-ik5" secondAttribute="top" id="5rh-sK-aJk"/>
-                                    <constraint firstAttribute="trailing" secondItem="IKW-R9-d1Y" secondAttribute="trailing" id="BtS-9S-fjs"/>
-                                    <constraint firstAttribute="height" constant="80" id="YQ1-Ld-I7f"/>
-                                    <constraint firstItem="IKW-R9-d1Y" firstAttribute="leading" secondItem="2dO-L7-ik5" secondAttribute="leading" id="yzz-2l-myt"/>
+                                    <constraint firstAttribute="trailing" secondItem="gW7-pn-m4Q" secondAttribute="trailing" id="7Wi-ua-q52"/>
+                                    <constraint firstItem="gW7-pn-m4Q" firstAttribute="top" secondItem="lbH-oW-YbJ" secondAttribute="top" id="9zo-hE-adG"/>
+                                    <constraint firstAttribute="height" constant="80" id="M1O-uZ-qdM"/>
+                                    <constraint firstItem="gW7-pn-m4Q" firstAttribute="leading" secondItem="lbH-oW-YbJ" secondAttribute="leading" id="hlg-rt-Tda"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i0A-Qh-4rz">
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rFO-Ci-TKr">
                                 <rect key="frame" x="16" y="136" width="343" height="44"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="4gT-Ny-M1f"/>
+                                    <constraint firstAttribute="height" constant="44" id="t6K-ND-PAt"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
                                 <state key="normal" title="Show message">
@@ -67,10 +68,10 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <action selector="toggleShowNotification:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wdn-Ox-bXR"/>
+                                    <action selector="toggleShowNotification:" destination="Hht-5d-N9E" eventType="touchUpInside" id="3HU-kZ-WhA"/>
                                 </connections>
                             </button>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="R39-R6-ZRb">
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="kC5-po-kPV">
                                 <rect key="frame" x="16" y="88" width="343" height="29"/>
                                 <segments>
                                     <segment title="Default"/>
@@ -78,51 +79,51 @@
                                     <segment title="Orange"/>
                                 </segments>
                                 <connections>
-                                    <action selector="toggleColor:" destination="vXZ-lx-hvc" eventType="valueChanged" id="Txf-be-oDS"/>
+                                    <action selector="toggleColor:" destination="Hht-5d-N9E" eventType="valueChanged" id="8aZ-cj-uy7"/>
                                 </connections>
                             </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="2dO-L7-ik5" secondAttribute="trailing" id="Czp-cd-TGr"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="R39-R6-ZRb" secondAttribute="trailing" id="Od9-Gd-KX7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="OLr-jb-dzO" secondAttribute="trailing" id="UFX-GM-q19"/>
-                            <constraint firstItem="i0A-Qh-4rz" firstAttribute="top" secondItem="R39-R6-ZRb" secondAttribute="bottom" constant="20" id="Ucl-88-3AW"/>
-                            <constraint firstItem="2dO-L7-ik5" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="Xcy-6x-8Sc"/>
-                            <constraint firstItem="OLr-jb-dzO" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="XvY-BY-mD3"/>
-                            <constraint firstItem="R39-R6-ZRb" firstAttribute="top" secondItem="OLr-jb-dzO" secondAttribute="bottom" constant="20" id="ZWv-CS-WyA"/>
-                            <constraint firstItem="R39-R6-ZRb" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="egh-wG-0kv"/>
-                            <constraint firstAttribute="bottom" secondItem="2dO-L7-ik5" secondAttribute="bottom" id="hSb-9l-DgP"/>
-                            <constraint firstItem="OLr-jb-dzO" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="20" id="ntd-zT-zXp"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="i0A-Qh-4rz" secondAttribute="trailing" id="qJ5-ah-mKT"/>
-                            <constraint firstItem="i0A-Qh-4rz" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="s8c-kQ-p3u"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="E9Z-Yk-2h2" secondAttribute="trailing" id="9BO-UB-KBb"/>
+                            <constraint firstAttribute="trailing" secondItem="lbH-oW-YbJ" secondAttribute="trailing" id="IjX-zx-rqi"/>
+                            <constraint firstItem="lbH-oW-YbJ" firstAttribute="leading" secondItem="5kH-2W-dJq" secondAttribute="leading" id="RX7-Fu-zcJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="rFO-Ci-TKr" secondAttribute="trailing" id="bCx-Lu-zwG"/>
+                            <constraint firstItem="kC5-po-kPV" firstAttribute="top" secondItem="E9Z-Yk-2h2" secondAttribute="bottom" constant="20" id="ehI-5p-9IL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kC5-po-kPV" secondAttribute="trailing" id="fhx-gy-vyh"/>
+                            <constraint firstItem="kC5-po-kPV" firstAttribute="leading" secondItem="5kH-2W-dJq" secondAttribute="leadingMargin" id="hgS-zd-o8l"/>
+                            <constraint firstItem="E9Z-Yk-2h2" firstAttribute="top" secondItem="LHv-av-Ddv" secondAttribute="bottom" constant="20" id="oIi-tx-uhF"/>
+                            <constraint firstItem="rFO-Ci-TKr" firstAttribute="top" secondItem="kC5-po-kPV" secondAttribute="bottom" constant="20" id="pnu-wW-UbH"/>
+                            <constraint firstAttribute="bottom" secondItem="lbH-oW-YbJ" secondAttribute="bottom" id="rPC-4C-mMa"/>
+                            <constraint firstItem="rFO-Ci-TKr" firstAttribute="leading" secondItem="5kH-2W-dJq" secondAttribute="leadingMargin" id="sKo-AA-Rhn"/>
+                            <constraint firstItem="E9Z-Yk-2h2" firstAttribute="leading" secondItem="5kH-2W-dJq" secondAttribute="leadingMargin" id="zpF-w7-eht"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="more" id="09j-ZL-4ls"/>
-                    <navigationItem key="navigationItem" id="1id-uZ-LoF"/>
+                    <tabBarItem key="tabBarItem" systemItem="more" id="jxz-P9-gpr"/>
+                    <navigationItem key="navigationItem" id="nTA-c5-IyI"/>
                     <connections>
-                        <outlet property="customView" destination="2dO-L7-ik5" id="Ypq-pY-i7n"/>
+                        <outlet property="customView" destination="lbH-oW-YbJ" id="vc5-59-YsJ"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W6o-Tg-mDC" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2850.4000000000001" y="37.331334332833585"/>
         </scene>
         <!--Tab Bar Controller-->
-        <scene sceneID="mtP-wQ-yp6">
+        <scene sceneID="ZbM-RP-sCb">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="LJv-9N-G36" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="S36-8q-MLe" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="NaN-MG-fKk">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="vSO-tL-8og">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="viewControllers" id="x79-ph-mED"/>
+                        <segue destination="Hht-5d-N9E" kind="relationship" relationship="viewControllers" id="2yh-5p-1Ud"/>
                     </connections>
                 </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iSd-eG-CUv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BXz-mq-19W" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1911.2" y="37.331334332833585"/>
         </scene>
