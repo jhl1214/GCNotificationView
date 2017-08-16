@@ -16,14 +16,16 @@ public class GCNotificationView: UIView {
     
     static fileprivate var isShowing: Bool = false
     public var duration: Double = 0.3
+    public var delay: Double = 3.0
     public var yPoint: CGFloat = 0
     public var bgColor: UIColor = GCNotificationViewDefaultColor.bgColor
     public var textColor: UIColor = GCNotificationViewDefaultColor.txtColor
     
-    public init(duration: Double = 0.3, yPoint: CGFloat = 0) {
+    public init(duration: Double = 0.3, delay: Double = 3.0, yPoint: CGFloat = 0) {
         super.init(frame: .zero)
         
         self.duration = duration
+        self.delay = delay
         self.yPoint = yPoint
     }
     
@@ -103,6 +105,12 @@ extension GCNotificationView {
         return self
     }
     
+    public func change(delay: Double) -> GCNotificationView {
+        self.delay = delay
+        
+        return self
+    }
+    
     public func change(yPoint: CGFloat) -> GCNotificationView {
         self.yPoint = yPoint
         
@@ -130,7 +138,7 @@ extension GCNotificationView {
         setupMessage(message: message)
         addNotificationView {
             showAnimation()
-            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0 + duration) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + duration + delay) {
                 self.dismissAnimation()
             }
         }
