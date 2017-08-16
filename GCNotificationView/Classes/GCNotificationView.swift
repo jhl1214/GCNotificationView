@@ -138,7 +138,8 @@ extension GCNotificationView {
         setupMessage(message: message)
         addNotificationView {
             showAnimation()
-            DispatchQueue.main.asyncAfter(deadline: .now() + duration + delay) {
+            let timeNeed = duration + delay
+            DispatchQueue.main.asyncAfter(deadline: .now() + timeNeed) {
                 self.dismissAnimation()
             }
         }
