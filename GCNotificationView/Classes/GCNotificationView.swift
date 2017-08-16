@@ -95,6 +95,18 @@ extension GCNotificationView {
 }
 
 extension GCNotificationView {
+    public func change(backgroundColor: UIColor) -> GCNotificationView {
+        self.bgColor = backgroundColor
+        
+        return self
+    }
+    
+    public func change(textColor: UIColor) -> GCNotificationView {
+        self.textColor = textColor
+        
+        return self
+    }
+    
     public func show(message: String) {
         guard !GCNotificationView.isShowing else {
             return
